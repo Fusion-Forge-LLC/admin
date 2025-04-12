@@ -37,8 +37,6 @@ export function RevenueBarChart() {
             <span>An error occured</span>
         )
     }
-
-    console.log(data.data)
   return (
       <div>
         <ChartContainer config={chartConfig}>

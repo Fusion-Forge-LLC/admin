@@ -62,3 +62,21 @@ export function getDateSevenDaysAgo() {
 
   return sevenDaysAgo;
 }
+
+export function updateUrl(
+  param: string,
+  value: number | string,
+  removeItems?: string[]
+) {
+  if (typeof window === "undefined") return "";
+
+  const parsedUrl = new URL(window.location.href);
+
+  parsedUrl.searchParams.set(param, value.toString());
+
+  removeItems?.map((item) => {
+    parsedUrl.searchParams.delete(item);
+  });
+
+  return parsedUrl.toString();
+}

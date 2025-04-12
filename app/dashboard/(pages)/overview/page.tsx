@@ -3,6 +3,8 @@
 import { useFetchOverview } from '@/api/dashboard/overview';
 import { Calender } from '@/components/dashboard/calender/calender';
 import Card from '@/components/dashboard/overview/card';
+import Property from '@/components/dashboard/overview/property';
+import PropertyLists from '@/components/dashboard/overview/property-lists';
 import Statistics from '@/components/dashboard/overview/statistics';
 import { Icons } from '@/components/icons/icons';
 import { useUser } from '@/context/user';
@@ -13,7 +15,7 @@ function Page() {
     const { User } = useUser();
     const {data, isLoading} = useFetchOverview();
     return (
-        <div className='p-5'>
+        <div className='p-5 border'>
             <div className='flex justify-between items-center'>
                 <div>
                     <h4 className='capitalize text-[#252424] text-2xl font-bold'>
@@ -112,9 +114,13 @@ function Page() {
                     </li>
                 </ul>
                 <div className='col-span-3'>
-
+                    <Property />
                 </div>
                 
+            </section>
+
+            <section className='py-5'>
+                <PropertyLists />
             </section>
         </div>
     )
