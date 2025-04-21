@@ -37,7 +37,8 @@ function PropertyLists() {
                 show_toolbar={false}
                 className="bg-white/95"
                 isLoading={isLoading}
-          />
+                className2="border-b border-b-[#D7D7D7]"
+            />
 
           <div className='py-4 flex items-center justify-between'>
             {data?.data && (

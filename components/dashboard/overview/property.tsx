@@ -41,7 +41,7 @@ function Property() {
                     return(
                         <li key={index} className='flex items-center justify-between'>
                             <span className='capitalize'>{item.type}</span>
-                            <span>{item.percentage}%</span>
+                            <span>{Math.ceil(item.percentage)}%</span>
                         </li>
                     )
                 })}

@@ -48,6 +48,7 @@ interface DataTableProps<TData, TValue> {
     icon?: React.ComponentType<{ className?: string }>;
   }[];
   className?: string;
+  className2?: string;
 }
 
 export function DataTable<TData, TValue>({
@@ -62,6 +63,7 @@ export function DataTable<TData, TValue>({
   isLoading,
   filterItems,
   className,
+  className2
 }: DataTableProps<TData, TValue>) {
   const [rowSelection, setRowSelection] = React.useState({});
 
@@ -144,7 +146,7 @@ export function DataTable<TData, TValue>({
                   data-state={row.getIsSelected() && "selected"}
                 >
                   {row.getVisibleCells().map((cell) => (
-                    <TableCell key={cell.id} className="border-b border-b-[#D7D7D7]">
+                    <TableCell key={cell.id} className={className2}>
                       {flexRender(
                         cell.column.columnDef.cell,
                         cell.getContext()

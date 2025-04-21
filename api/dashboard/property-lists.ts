@@ -48,6 +48,7 @@ export interface Property {
     __v: number;
     old_price?: number;
     price_prefix?: string;
+    rating: number
 }
 
 interface ResponseData {

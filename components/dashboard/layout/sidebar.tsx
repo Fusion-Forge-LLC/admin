@@ -13,9 +13,14 @@ export const navItems = [
         link: "/dashboard/overview"
     },
     {
-        title: "Customers",
+        title: "vendors",
         Icon: Icons.users,
         link: "/dashboard/customers"
+    },
+    {
+        title: "Clients",
+        Icon: Icons.users,
+        link: "/dashboard/clients"
     },
     {
         title: "Properties",

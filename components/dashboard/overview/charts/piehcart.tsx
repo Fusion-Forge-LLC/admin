@@ -44,7 +44,7 @@ export function PropertyPieChart({data}:{data: PropertyStatTypes[] | undefined})
     return (
         <ChartContainer
             config={chartConfig}
-            className="mx-auto aspect-square max-h-[250px]"
+            className="mx-auto aspect-square h-[250px]"
         >
             <PieChart>
                 <ChartTooltip

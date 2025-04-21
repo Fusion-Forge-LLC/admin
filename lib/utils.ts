@@ -80,3 +80,19 @@ export function updateUrl(
 
   return parsedUrl.toString();
 }
+
+export function formatDate(date: string | Date){
+  return new Date(date).toLocaleDateString('en-US', {
+    day: "2-digit",
+    month: "long",
+    year: "numeric"
+  })
+}
+
+export function formatCurrency(amount: number){
+  return new Intl.NumberFormat('en-NG', {
+    style: 'currency',
+    currency: 'NGN',
+    minimumFractionDigits: 0,
+  }).format(amount);
+}

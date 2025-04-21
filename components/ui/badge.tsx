@@ -8,12 +8,14 @@ const badgeVariants = cva(
     variants: {
       variant: {
         PENDING: "border-transparent bg-[#FFF9ED] text-[#FFA800]",
-        APPROVED: "border-transparent bg-success-subtle text-success",
+        APPROVED: "border-transparent bg-green-100 text-green-500",
+        ACTIVE: "border-transparent bg-green-100 text-green-500",
         DELIVERED: "border-transparent bg-success-subtle text-success-dark",
         PURCHASED: "border-transparent bg-[#E1EAED] text-[#04202A]",
         CANCELLED: "border-transparent bg-error-subtle text-error-dark",
         REJECTED: "border-transparent bg-error-subtle text-error-dark",
         FAILED: "border-transparent bg-error-subtle text-error-dark",
+        INACTIVE: "border-transparent bg-error-subtle text-error-dark",
       },
     },
     defaultVariants: { variant: "PENDING" },

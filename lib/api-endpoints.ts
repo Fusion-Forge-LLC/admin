@@ -8,6 +8,15 @@ export const API_ENDPOINTS = {
         overview: "/admin/dashboard/overview",
         chart: "/admin/dashboard/overview/chart",
         propertyStats: "/admin/dashboard/properties/stat",
-        propertyLists: (page: number, limit: number) => `/admin/dashboard/properties/list?page=${page}&limit=${limit}`,
+        propertyLists: (page: number, limit: number) => 
+            `/admin/dashboard/properties/list?page=${page}&limit=${limit}`,
+    },
+
+    USERS: {
+        vendors: (page: string, limit: string) => 
+            `/admin/dashboard/users/business?page=${page}&limit=${limit}`,
+        vendor: (id: string) => 
+            `/admin/dashboard/users/business/${id}`
+        
     }
 }

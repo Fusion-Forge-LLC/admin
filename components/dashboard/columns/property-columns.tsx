@@ -75,7 +75,7 @@ export const properties_column: ColumnDef<Property>[] = [
             const data = row.original;
             return (
                 <p className="capitalize min-w-20 text-sm text-[#707070]  flex items-center gap-1">
-                    <Star color="#FABB05" size={16}/> 4.5
+                    <Star color="#FABB05" size={16}/> {data.rating || 4.5}
                 </p>
             );
         },
@@ -85,11 +85,8 @@ export const properties_column: ColumnDef<Property>[] = [
         header: "Status",
         cell: ({ row }) => {
             const data = row.original;
-            return (
-                <p className="capitalize text-sm text-[#707070] ">
-                    <Badge>{data.status}</Badge>
-                </p>
-            );
+            const status = data.status.toLocaleUpperCase() as "ACTIVE" | "INACTIVE";
+            return <Badge variant={status}>{data.status}</Badge>
         },
     },
     {
