@@ -13,9 +13,9 @@ export const navItems = [
         link: "/dashboard/overview"
     },
     {
-        title: "vendors",
+        title: "Vendors",
         Icon: Icons.users,
-        link: "/dashboard/customers"
+        link: "/dashboard/vendors"
     },
     {
         title: "Clients",

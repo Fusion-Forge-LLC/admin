@@ -10,12 +10,10 @@ import { Icons } from '@/components/icons/icons'
 import { DataTable } from '@/components/ui/data-table'
 import EmptyState from '@/components/ui/empty-state'
 import { formatDate } from '@/lib/utils'
-import Link from 'next/link'
 import React from 'react'
 
 function Page({params}:{params: {id: string}}) {
     const {data, isLoading} = useFetchVendorDetails(params.id);
-    console.log({data, isLoading});
 
     if(!data){
         return(

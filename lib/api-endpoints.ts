@@ -16,7 +16,10 @@ export const API_ENDPOINTS = {
         vendors: (page: string, limit: string) => 
             `/admin/dashboard/users/business?page=${page}&limit=${limit}`,
         vendor: (id: string) => 
-            `/admin/dashboard/users/business/${id}`
-        
+            `/admin/dashboard/users/business/${id}`,
+        clients: (page: string, limit: string) => 
+            `/admin/dashboard/users/client?page=${page}&limit=${limit}`,
+        client: (id: string) =>   
+            `/admin/dashboard/users/client/${id}`,
     }
 }

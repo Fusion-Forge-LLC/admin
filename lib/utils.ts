@@ -41,7 +41,7 @@ export function getGreeting() {
 
   let greeting;
 
-  if (hour >= 5 && hour < 12) {
+  if (hour >= 0 && hour < 12) {
     greeting = 'Good morning!';
   } else if (hour >= 12 && hour < 18) {
     greeting = 'Good afternoon!';
@@ -95,4 +95,26 @@ export function formatCurrency(amount: number){
     currency: 'NGN',
     minimumFractionDigits: 0,
   }).format(amount);
+}
+
+export function getDuration(from: string | Date, to: string | Date){
+  const startDate = new Date(from).toLocaleDateString('en-US', {
+    day: "2-digit",
+    month: "short",
+  })
+
+  const endDate = new Date(to).toLocaleDateString('en-US', {
+    day: "2-digit",
+    month: "short",
+  })
+
+  return `${startDate} - ${endDate} `;
+}
+
+export function formatDateShort(date: string | Date){
+  return new Date(date).toLocaleDateString('en-US', {
+    day: "2-digit",
+    month: "short",
+    year: "numeric"
+  })
 }
