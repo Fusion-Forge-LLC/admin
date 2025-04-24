@@ -143,6 +143,7 @@ function Page() {
                                             {Array.from({length: 5}).map((_, index) => {
                                                 return (
                                                     <Icons.reviewStar
+                                                        key={index}
                                                         fill={index + 1 <= item.rating ? "#FABB05" : "#888888"}
                                                         opacity={index + 1 <= item.rating ? 1 : 0.5}
                                                     />        

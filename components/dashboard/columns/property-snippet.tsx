@@ -37,7 +37,7 @@ export const property_snippet: ColumnDef<Property>[] = [
             const data = row.original;
             const status = data.status.toLocaleUpperCase() as "ACTIVE"
             return (
-                <Badge variant={"APPROVED"}>{data.status}</Badge>
+                <Badge variant={status}>{data.status}</Badge>
             );
         },
     },

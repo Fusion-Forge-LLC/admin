@@ -1,7 +1,6 @@
 "use client"
 
 import { Clients } from "@/api/users/clients";
-import { Icons } from "@/components/icons/icons";
 import { Badge } from "@/components/ui/badge";
 import {
     DropdownMenu,

@@ -11,7 +11,6 @@ import { useUser } from '@/context/user';
 function Header() {
     const { User } = useUser();
     const [openMenu, setOpenMenu] = useState(false);
-    const [openChangePassword, setOpenChangePassword] = useState(false);
     return (
         <header className='bg-white shadow-[0px_1px_4px_rgba(0,0,0,0.2)] sticky top-0 left-0 z-50 p-5 flex items-center gap-5'>
             <div className='relative w-80 mr-auto'>
@@ -74,7 +73,6 @@ function Header() {
                     <div className="space-y-1 *:cursor-pointer *:flex *:items-center *:gap-2 *:px-5 *:py-3 ">
                     <p
                         className="hover:bg-neutral-100"
-                        onClick={() => setOpenChangePassword(true)}
                     >
                         <Icons.password />
                         Change Password

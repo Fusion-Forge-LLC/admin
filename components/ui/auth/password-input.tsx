@@ -1,9 +1,9 @@
-import React, { useState, ChangeEvent, InputHTMLAttributes } from 'react';
+import React, { useState, InputHTMLAttributes } from 'react';
 import { Input } from '../input';
 import { Eye, EyeOff } from 'lucide-react';
 
 interface PasswordToggleInputProps extends InputHTMLAttributes<HTMLInputElement> {
-  label?: React.ReactNode; // Allows any renderable node as a label
+  label?: React.ReactNode; 
 }
 
 const PasswordToggleInput: React.FC<PasswordToggleInputProps> = ({

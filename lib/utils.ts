@@ -7,7 +7,15 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-export const displayErrorMessage = (errorData: AxiosError<any>, toastId?: string | number) => {
+type ErrorType = {
+  message: string;
+  response?: {
+    data?: {
+      message?: string
+    }
+  }
+}
+export const displayErrorMessage = (errorData: AxiosError<ErrorType>, toastId?: string | number) => {
   if (errorData.message === "Network Error") {
     toast.error("Please check your internet connection");
 

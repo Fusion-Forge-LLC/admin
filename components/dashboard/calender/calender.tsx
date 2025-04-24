@@ -1,5 +1,3 @@
-// @ts-nocheck
-
 import { Icons } from "@/components/icons/icons";
 import { Input } from "@/components/ui/input";
 import { getDateSevenDaysAgo } from "@/lib/utils";
@@ -18,7 +16,8 @@ export function Calender() {
 
     useEffect(() => {
         function handleOutSideClick(event: MouseEvent){
-            if(ref.current && !ref.current.contains(event.target)){
+            const targetedElement = event.target as Node
+            if(ref.current && !ref.current.contains(targetedElement)){
                 setShowDate(false)
             }
         }
@@ -65,6 +64,7 @@ export function Calender() {
                     selected={selected}
                     onSelect={setSelected}
                     disabled={{after: new Date()}}
+                    required
                 />
             </div>}
         </div>

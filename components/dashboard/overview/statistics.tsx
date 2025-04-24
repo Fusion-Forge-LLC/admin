@@ -11,7 +11,7 @@ import { RevenueBarChart } from './charts/barcharts'
 import { useFetchChart } from '@/api/dashboard/chart';
 
 function Statistics() {
-    const{ data, isLoading } = useFetchChart();
+    const{ data } = useFetchChart();
     return (
         <div className=' py-4 space-y-5 bg-[#F2F4F5] border border-[#DCE4F9] p-5 rounded-[12px]'>
             <header className='flex justify-between items-center'>

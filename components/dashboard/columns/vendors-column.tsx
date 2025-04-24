@@ -7,31 +7,14 @@ import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { Item } from "@radix-ui/react-select";
 import { ColumnDef } from "@tanstack/react-table";
 import { EllipsisVertical } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 export const vendors_column: ColumnDef<VendorsWithStats>[] = [
-    // {
-    //     accessorKey: "S/N",
-    //     header: () => {
-    //         return <div className="pl-4 py-3">Id</div>
-    //     },
-    //     cell: ({ row }) => {
-    //         const data = row.original;
-    //         return (
-    //             <p className="capitalize w-32 text-sm text-[#707070] pl-4 overflow-hidden pr-2">
-    //                 {data._id}
-    //             </p>
-    //         );
-    //     },
-    // },
     {
         accessorKey: "createdAt",
         header: () => {
