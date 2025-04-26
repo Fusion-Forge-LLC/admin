@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Checkbox } from "@/components/ui/checkbox";
 import { formatCurrency } from "@/lib/utils";
 import { ColumnDef } from "@tanstack/react-table";
-import { EllipsisVertical, Star } from "lucide-react";
+import { EllipsisVertical } from "lucide-react";
 
 export const properties_column: ColumnDef<Property>[] = [
     {
@@ -14,7 +14,7 @@ export const properties_column: ColumnDef<Property>[] = [
         header: () => {
             return <div className="pl-4 py-3"><Checkbox /></div>
         },
-        cell: ({ row }) => {
+        cell: () => {
             return (
                 <p className="pl-4 overflow-hidden pr-2">
                     <Checkbox />

@@ -11,7 +11,7 @@ import EmptyState from '@/components/ui/empty-state'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { pageNumberCount } from '@/lib/utils'
 import { ChevronDown, ChevronLeft, ChevronRight, RotateCcw } from 'lucide-react'
-import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import React, { useState } from 'react'
 
 const pageLimit = 10;
@@ -20,7 +20,6 @@ function Page() {
     const param = useSearchParams().entries();
     const query = Object.fromEntries(param);
     const router = useRouter();
-    const pathName = usePathname();
     const {data} = useGetPropertiesLocations(undefined);
     const {data: properties, isLoading} = useFetchAllProperties(query);
     const [propertyType, setPropertyType] = useState(query["type"] || "");
