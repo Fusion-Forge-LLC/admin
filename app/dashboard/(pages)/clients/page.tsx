@@ -14,10 +14,6 @@ function Page() {
     const param = useSearchParams().entries();
     const query = Object.fromEntries(param);
     const {data, isLoading} = useGetClients(query);
-
-    console.log(data);
-
-    
     
     const nextPage = () => {
         let prevPage = parseInt(query["page"] || "1");
