@@ -472,5 +472,16 @@ export const Icons = {
             fillOpacity={props.opacity}
           />
         </svg>
-      )
+    ),
+    filter: (props: IconProps) => (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+            <path d="M5.39844 2.10156H18.5984C19.6984 2.10156 20.5984 3.00156 20.5984 4.10156V6.30156C20.5984 7.10156 20.0984 8.10156 19.5984 8.60156L15.2984 12.4016C14.6984 12.9016 14.2984 13.9016 14.2984 14.7016V19.0016C14.2984 19.6016 13.8984 20.4016 13.3984 20.7016L11.9984 21.6016C10.6984 22.4016 8.89844 21.5016 8.89844 19.9016V14.6016C8.89844 13.9016 8.49844 13.0016 8.09844 12.5016L4.29844 8.50156C3.79844 8.00156 3.39844 7.10156 3.39844 6.50156V4.20156C3.39844 3.00156 4.29844 2.10156 5.39844 2.10156Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10.93 2.10156L6 10.0016" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    ),
+    rotate: (props: IconProps) => (
+        <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+            <path d="M9.5 3.75V0.75L5.75 4.5L9.5 8.25V5.25C11.9825 5.25 14 7.2675 14 9.75C14 12.2325 11.9825 14.25 9.5 14.25C7.0175 14.25 5 12.2325 5 9.75H3.5C3.5 13.065 6.185 15.75 9.5 15.75C12.815 15.75 15.5 13.065 15.5 9.75C15.5 6.435 12.815 3.75 9.5 3.75Z" fill="#EF4444"/>
+        </svg>
+    )
 }

@@ -39,7 +39,7 @@ export const clients_column: ColumnDef<Clients>[] = [
     },
     {
         accessorKey: "totalBookings",
-        header: "Booking History",
+        header: () => <div className="py-3 px-2 whitespace-nowrap">Booking History</div>,
         cell: ({ row }) => {
             const data = row.original;
             return (
@@ -52,9 +52,14 @@ export const clients_column: ColumnDef<Clients>[] = [
     {
         accessorKey: "currentRentals",
         header: () => {
-            return <div className="px-2 py-3 text-center">Current Rentals</div>
+            return <div className="px-2 py-3 text-center whitespace-nowrap">Current Rentals</div>
         },
-        cell: () => <p className="capitalize pr-1 text-sm text-[#707070] text-center"> None </p>
+        cell: ({row}) => {
+            const data = row.original;
+            return(
+                <p className="capitalize pr-1 text-sm text-[#707070] text-center">{data.hasActiveBooking ? "Active" : "None"} </p>
+            )
+        }
     },
     {
         accessorKey: "createdAt",
@@ -72,7 +77,7 @@ export const clients_column: ColumnDef<Clients>[] = [
     },
     {
         accessorKey: "location",
-        header: "Location",
+        header: () => <div className="py-3 px-2 whitespace-nowrap">Location</div>,
         cell: ({ row }) => {
             const data = row.original;
             return (

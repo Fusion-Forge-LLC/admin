@@ -61,7 +61,7 @@ function Sidebar() {
                     const isActive = pathname === item.link;
                     return(
                         <li key={index} className={cn( isActive && "bg-[#DFE8FF] border-l-5 border-l-[#08246C]")}>
-                            <Link href={item.link} className='flex items-center gap-4 px-6 py-5 hover:bg-[#DFE8FF]/50'>
+                            <Link href={item.link} className='flex items-center gap-4 px-6 py-4 hover:bg-[#DFE8FF]/50'>
                                 <item.Icon stroke={isActive ? "#205BF3" : "#FFFFFF"} />
                                 <span className={cn(isActive && "text-[#205BF3]")}>{item.title}</span>
                             </Link>

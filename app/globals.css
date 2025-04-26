@@ -122,3 +122,15 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .filter-item{
+    @apply py-5 border-r border-r-[#D7D7D7] last:border-r-0
+  }
+}
+
+@layer utilities {
+  .filter-select{
+    @apply border-none shadow-none focus-visible:border-none focus-visible:ring-0 text-[#252424]
+  }
+}

@@ -126,3 +126,9 @@ export function formatDateShort(date: string | Date){
     year: "numeric"
   })
 }
+
+export function pageNumberCount(currentPage: number, pageLimit: number, totalCount: number){
+  const currentPageStart = ((currentPage - 1) * pageLimit) + 1;
+  const currentPageLimit = currentPage * pageLimit;
+  return `${currentPageStart}-${Math.min(currentPageLimit, totalCount)} of ${totalCount}`;
+}

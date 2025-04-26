@@ -17,6 +17,7 @@ export type Clients = {
     totalBookings: number;
     profileImage: string;
     city: string;
+    hasActiveBooking: boolean;
 };
 
 interface ResponseData {

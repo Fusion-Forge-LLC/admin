@@ -15,7 +15,7 @@ function Page() {
     const { User } = useUser();
     const {data, isLoading} = useFetchOverview();
     return (
-        <div className='p-5 border'>
+        <div className='p-5'>
             <div className='flex justify-between items-center'>
                 <div>
                     <h4 className='capitalize text-[#252424] text-2xl font-bold'>

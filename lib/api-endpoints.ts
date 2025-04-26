@@ -21,5 +21,13 @@ export const API_ENDPOINTS = {
             `/admin/dashboard/users/client?page=${page}&limit=${limit}`,
         client: (id: string) =>   
             `/admin/dashboard/users/client/${id}`,
+    },
+
+    LIST: {
+        location: `/lists/address/locations`
+    },
+
+    PROPERTIES: {
+        allProperties: (query: string) => `/admin/dashboard/properties/all?${query}`
     }
 }
