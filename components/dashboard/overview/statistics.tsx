@@ -30,7 +30,7 @@ function Statistics() {
                 </div>
             </header>
 
-            <ul className='grid grid-cols-3 gap-4'>
+            <ul className='grid grid-cols-1 sm:grid-cols-3 gap-4'>
                 <li className='flex items-center gap-2'>
                     <span className='h-8 w-8 rounded-full shrink-0 bg-[#DCE4F9] grid place-content-center'>
                         {<Icons.receive />}

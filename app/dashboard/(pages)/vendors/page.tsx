@@ -51,14 +51,14 @@ function Page() {
                 <div className='flex items-center border border-[#D5D5D5] bg-[#FAFBFD] w-fit rounded-[8px] overflow-hidden'>
                     <button
                         disabled={data?.data.currentPage === 1}
-                        className='px-4 py-2.5 border-r border-r-[#D5D5D5] disabled:bg-muted disabled:cursor-not-allowed'
+                        className='px-2 sm:px-4 py-1 sm:py-2.5 border-r border-r-[#D5D5D5] disabled:bg-muted disabled:cursor-not-allowed'
                         onClick={prevPage}
                     >
                         <ChevronLeft />
                     </button>
                     <button
                         disabled={data?.data.currentPage === data?.data.totalPages}
-                        className='px-4 py-2.5 disabled:bg-muted disabled:cursor-not-allowed'
+                        className='px-2 sm:px-4 py-1 sm:py-2.5 disabled:bg-muted disabled:cursor-not-allowed'
                         onClick={nextPage}
                     >
                         <ChevronRight />

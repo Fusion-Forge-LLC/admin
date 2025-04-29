@@ -1,58 +1,15 @@
 "use client"
 
-import { Icons } from '@/components/icons/icons'
+import { navItems } from '@/constant/nav-items'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
 
-export const navItems = [
-    {
-        title: "Dashboard",
-        Icon: Icons.dashboard,
-        link: "/dashboard/overview"
-    },
-    {
-        title: "Vendors",
-        Icon: Icons.users,
-        link: "/dashboard/vendors"
-    },
-    {
-        title: "Clients",
-        Icon: Icons.users,
-        link: "/dashboard/clients"
-    },
-    {
-        title: "Properties",
-        Icon: Icons.building,
-        link: "/dashboard/properties"
-    },
-    {
-        title: "Message",
-        Icon: Icons.message,
-        link: "/dashboard/message"
-    },
-    {
-        title: "Subscription",
-        Icon: Icons.invoice,
-        link: "/dashboard/subscription"
-    },
-    {
-        title: "Analytics",
-        Icon: Icons.analytics,
-        link: "/dashboard/analytics"
-    },
-    {
-        title: "Notifications",
-        Icon: Icons.bell,
-        link: "/dashboard/notifications"
-    }
-]
-
 function Sidebar() {
     const pathname = usePathname();
     return (
-        <aside className='h-full bg-[#205BF3] w-54 text-white'>
+        <aside className='h-full bg-[#205BF3] w-54 text-white hidden lg:block'>
             <header className='px-6 py-10'>
                 <span className='font-bold text-2xl'>SpaceFinda</span>
             </header>

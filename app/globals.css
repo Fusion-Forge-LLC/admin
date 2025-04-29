@@ -125,7 +125,7 @@
 
 @layer components {
   .filter-item{
-    @apply py-5 border-r border-r-[#D7D7D7] last:border-r-0
+    @apply py-2 md:py-5 border-r border-r-[#D7D7D7] last:border-r-0
   }
 }
 

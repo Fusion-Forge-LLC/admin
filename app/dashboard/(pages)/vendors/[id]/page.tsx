@@ -35,7 +35,7 @@ function Page() {
         recentPayouts
     } = data.data
     return (
-        <div className='p-5 grid grid-cols-2 gap-5'>
+        <div className='p-5 grid grid-cols-1 sm:grid-cols-2 gap-5'>
             <Card title='Basic Information' isLoading={isLoading}>
                 <ul className='space-y-5'>
                     <ListItem

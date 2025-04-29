@@ -16,7 +16,7 @@ function Page() {
     const {data, isLoading} = useFetchOverview();
     return (
         <div className='p-5'>
-            <div className='flex justify-between items-center'>
+            <div className='flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4'>
                 <div>
                     <h4 className='capitalize text-[#252424] text-2xl font-bold'>
                         Hello {User?.fullname.split(" ")[0]}
@@ -30,7 +30,7 @@ function Page() {
                 </div>
             </div>
 
-            <div className='grid grid-cols-4 gap-4 py-4'>
+            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 py-4'>
                 <Card
                     icon={<Icons.users stroke='#FFF' />}
                     title='Total Customers'
@@ -95,11 +95,11 @@ function Page() {
                 </Card>
             </div>
 
-            <section className='grid grid-cols-12 gap-4'>
+            <section className='grid grid-cols-6 md:grid-cols-12 gap-4'>
                 <div className='col-span-6'>
                     <Statistics />
                 </div>
-                <ul className='col-span-3 flex flex-col justify-between'>
+                <ul className='col-span-6 sm:col-span-3 flex flex-col justify-between max-sm:gap-5'>
                     <li className='bg-[#F6F6F6] rounded-[12px] px-6 py-7 space-y-3'>
                         <h4 className='text-sm text-[#696969]'>Total Users</h4>
                         <p className='text-2xl font-bold text-[#252424]'>{data?.data.users.toLocaleString()}</p>
@@ -113,7 +113,7 @@ function Page() {
                         <p className='text-2xl font-bold text-[#252424]'>{data?.data.users.toLocaleString()}</p>
                     </li>
                 </ul>
-                <div className='col-span-3'>
+                <div className='col-span-6 sm:col-span-3'>
                     <Property />
                 </div>
                 

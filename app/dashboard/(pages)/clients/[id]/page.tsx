@@ -50,7 +50,7 @@ function Page() {
         reviews
     } = data.data
     return (
-        <div className='p-5 grid grid-cols-2 gap-5'>
+        <div className='p-5 grid grid-cols-1 sm:grid-cols-2 gap-5'>
             <Card title='Basic Information' isLoading={isLoading}>
                 <ul className='space-y-5'>
                     <ListItem
@@ -128,6 +128,7 @@ function Page() {
             
             <div>
                 <h4 className='text-[#1E1E1E] font-medium py-4'>Reviews</h4> 
+                {reviews.length === 0 ? <p className='text-center italic py-5 sm:py-10'>No Review Yet</p> : null}
                 <ul>
                     {reviews.map(item => {
                         return(
