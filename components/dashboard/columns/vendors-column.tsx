@@ -13,6 +13,9 @@ import { ColumnDef } from "@tanstack/react-table";
 import { EllipsisVertical } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRef, useState } from "react";
+import Suspend from "../menu/suspend";
+import SuspendModal from "../menu/suspend-modal";
 
 export const vendors_column: ColumnDef<VendorsWithStats>[] = [
     {
@@ -118,7 +121,7 @@ export const vendors_column: ColumnDef<VendorsWithStats>[] = [
             const status = data.status.toLocaleUpperCase() as "ACTIVE" | "INACTIVE";
             return (
                 <p className="text-sm text-[#707070] ">
-                    <Badge variant={status}>{status}</Badge>
+                    <Badge variant={data.isSuspended ? "CANCELLED" : status}>{data.isSuspended ? "SUSPENDED" : status}</Badge>
                 </p>
             );
         },
@@ -128,17 +131,28 @@ export const vendors_column: ColumnDef<VendorsWithStats>[] = [
         header: "",
         cell: ({ row }) => {
             const data = row.original;
+            const [showModal, setShowModal] = useState(false);
             return (
-                <DropdownMenu>
-                    <DropdownMenuTrigger className="px-4">
-                        <EllipsisVertical />
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent>
-                        <DropdownMenuItem>
-                            <Link href={`/dashboard/vendors/${data._id}`}>View More</Link>
-                        </DropdownMenuItem>
-                    </DropdownMenuContent>
-                </DropdownMenu>
+                <>
+                    <DropdownMenu>
+                        <DropdownMenuTrigger className="px-4">
+                            <EllipsisVertical />
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent>
+                            <DropdownMenuItem     
+                                className="text-red-500" 
+                                onClick={() => setShowModal(true)}
+                            >
+                                {data.isSuspended ? "Unsuspend" : "Suspend"}
+                            </DropdownMenuItem>
+                            <DropdownMenuItem>
+                                <Link href={`/dashboard/vendors/${data._id}`}>View More</Link>
+                            </DropdownMenuItem>
+                        </DropdownMenuContent>
+                    </DropdownMenu>
+
+                    <SuspendModal isSuspended={data.isSuspended} userId={data._id} isOpen={showModal} closeModal={setShowModal} />
+                </>
             );
         },
     },

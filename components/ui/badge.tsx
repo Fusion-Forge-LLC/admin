@@ -13,7 +13,7 @@ const badgeVariants = cva(
         ACTIVE: "border-transparent bg-green-100 text-green-500",
         DELIVERED: "border-transparent bg-success-subtle text-success-dark",
         PURCHASED: "border-transparent bg-[#E1EAED] text-[#04202A]",
-        CANCELLED: "border-transparent bg-error-subtle text-error-dark",
+        CANCELLED: "border-transparent bg-red-100 text-red-500",
         REJECTED: "border-transparent bg-error-subtle text-error-dark",
         FAILED: "border-transparent bg-error-subtle text-error-dark",
         INACTIVE: "border-transparent bg-error-subtle text-error-dark",

@@ -19,6 +19,7 @@ export type VendorsWithStats = {
     profileId: string;
     createdAt: string; 
     updatedAt: string;
+    isSuspended: boolean;
     __v: number;
     totalProperties: number;
     averageRating: number | null;
