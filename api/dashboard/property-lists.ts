@@ -48,7 +48,9 @@ export interface Property {
     __v: number;
     old_price?: number;
     price_prefix?: string;
-    rating: number
+    rating: number,
+    isSuspended: boolean,
+    isOwnerSuspended: boolean,
 }
 
 interface ResponseData {

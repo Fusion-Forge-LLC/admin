@@ -68,9 +68,9 @@ function Page() {
         <div className='p-5 space-y-5'>
             <h2 className='text-[#252424] font-bold text-2xl md:text-3xl'>Properties Management</h2>
 
-            <ScrollArea className="w-96">
+            <ScrollArea className="w-fit max-w-full border border-[#D7D7D7] rounded-[12px]">
 
-                <div className='flex items-center  border border-[#D7D7D7] rounded-[12px] text-[#434343] w-fit'>
+                <div className='flex items-center text-[#434343] w-fit'>
                     <div className='filter-item px-4 h-full'>
                         <button className='py-1.5 flex items-center'>
                             <Icons.filter />
@@ -104,9 +104,9 @@ function Page() {
                             </SelectTrigger>
                             <SelectContent>
                                 <SelectItem value="all">All Status</SelectItem>
-                                <SelectItem value="active">Active</SelectItem>
-                                <SelectItem value="pending">Pending</SelectItem>
-                                <SelectItem value="inactive">Inactive</SelectItem>
+                                <SelectItem value="Active">Active</SelectItem>
+                                <SelectItem value="Pending">Pending</SelectItem>
+                                <SelectItem value="isSuspended">Suspended</SelectItem>
                             </SelectContent>
                         </Select>
                     </div>

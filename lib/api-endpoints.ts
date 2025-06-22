@@ -28,6 +28,7 @@ export const API_ENDPOINTS = {
     },
 
     PROPERTIES: {
-        allProperties: (query: string) => `/admin/dashboard/properties/all?${query}`
+        allProperties: (query: string) => `/admin/dashboard/properties/all?${query}`,
+        property: (id: string ) => `/admin/dashboard/properties/${id}`
     }
 }

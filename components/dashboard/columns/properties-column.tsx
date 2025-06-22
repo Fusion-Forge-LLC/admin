@@ -7,6 +7,15 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { formatCurrency } from "@/lib/utils";
 import { ColumnDef } from "@tanstack/react-table";
 import { EllipsisVertical } from "lucide-react";
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import Link from "next/link";
+import { useState } from "react";
+import SuspendModal from "../menu/suspend-property";
 
 export const properties_column: ColumnDef<Property>[] = [
     {
@@ -100,17 +109,36 @@ export const properties_column: ColumnDef<Property>[] = [
         cell: ({ row }) => {
             const data = row.original;
             const status = data.status.toLocaleUpperCase() as "ACTIVE" | "INACTIVE";
-            return <Badge variant={status}>{data.status}</Badge>
+            return <Badge variant={data.isSuspended ? "CANCELLED" : status}>{data.isSuspended ? "SUSPENDED" : status}</Badge>
         },
     },
     {
         accessorKey: "menu",
         header: "",
-        cell: () => {
+        cell: ({ row }) => {
+            const data = row.original;
+            const [showModal, setShowModal] = useState(false);
             return (
-                <p className="text-sm text-[#707070] px-4">
-                    <EllipsisVertical />
-                </p>
+                 <>
+                    <DropdownMenu>
+                        <DropdownMenuTrigger className="px-4">
+                            <EllipsisVertical />
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent>
+                            <DropdownMenuItem     
+                                className="text-red-500" 
+                                onClick={() => setShowModal(true)}
+                            >
+                                {data.isSuspended ? "Unsuspend" : "Suspend"}
+                            </DropdownMenuItem>
+                            <DropdownMenuItem>
+                                <Link href={`/dashboard/properties/${data._id}`}>View More</Link>
+                            </DropdownMenuItem>
+                        </DropdownMenuContent>
+                    </DropdownMenu>
+
+                    <SuspendModal isSuspended={data.isSuspended} propertyId={data._id} isOpen={showModal} closeModal={setShowModal} />
+                </>
             );
         },
     },
