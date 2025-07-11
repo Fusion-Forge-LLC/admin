@@ -1,7 +1,7 @@
 import { useModifyVendor } from '@/api/users/suspend-vendor'
 import { Button } from '@/components/ui/button'
 import Loader from '@/components/ui/loader';
-import React, { Dispatch, SetStateAction, useState } from 'react'
+import React, { Dispatch, SetStateAction } from 'react'
 
 function SuspendModal({userId, isOpen, closeModal, isSuspended}:{
     userId: string,

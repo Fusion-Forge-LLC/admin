@@ -3,19 +3,9 @@
 import { VendorsWithStats } from "@/api/users/vendors";
 import { Icons } from "@/components/icons/icons";
 import { Badge } from "@/components/ui/badge";
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
 import { ColumnDef } from "@tanstack/react-table";
-import { EllipsisVertical } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
-import { useRef, useState } from "react";
-import Suspend from "../menu/suspend";
-import SuspendModal from "../menu/suspend-modal";
+import VendorsMenu from "./menu/vendors-menu";
 
 export const vendors_column: ColumnDef<VendorsWithStats>[] = [
     {
@@ -131,29 +121,8 @@ export const vendors_column: ColumnDef<VendorsWithStats>[] = [
         header: "",
         cell: ({ row }) => {
             const data = row.original;
-            const [showModal, setShowModal] = useState(false);
-            return (
-                <>
-                    <DropdownMenu>
-                        <DropdownMenuTrigger className="px-4">
-                            <EllipsisVertical />
-                        </DropdownMenuTrigger>
-                        <DropdownMenuContent>
-                            <DropdownMenuItem     
-                                className="text-red-500" 
-                                onClick={() => setShowModal(true)}
-                            >
-                                {data.isSuspended ? "Unsuspend" : "Suspend"}
-                            </DropdownMenuItem>
-                            <DropdownMenuItem>
-                                <Link href={`/dashboard/vendors/${data._id}`}>View More</Link>
-                            </DropdownMenuItem>
-                        </DropdownMenuContent>
-                    </DropdownMenu>
-
-                    <SuspendModal isSuspended={data.isSuspended} userId={data._id} isOpen={showModal} closeModal={setShowModal} />
-                </>
-            );
+            
+            return <VendorsMenu data={data} />
         },
     },
 ]
