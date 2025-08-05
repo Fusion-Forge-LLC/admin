@@ -483,5 +483,15 @@ export const Icons = {
         <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
             <path d="M9.5 3.75V0.75L5.75 4.5L9.5 8.25V5.25C11.9825 5.25 14 7.2675 14 9.75C14 12.2325 11.9825 14.25 9.5 14.25C7.0175 14.25 5 12.2325 5 9.75H3.5C3.5 13.065 6.185 15.75 9.5 15.75C12.815 15.75 15.5 13.065 15.5 9.75C15.5 6.435 12.815 3.75 9.5 3.75Z" fill="#EF4444"/>
         </svg>
+    ),
+
+    money: (props: IconProps) => (
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+            <path d="M14.4737 5.9406V9.80312C14.4737 12.1131 13.1538 13.1031 11.1738 13.1031H4.58125C4.24375 13.1031 3.92125 13.0731 3.62125 13.0056C3.43375 12.9756 3.25375 12.9231 3.08875 12.8631C1.96375 12.4431 1.28125 11.4681 1.28125 9.80312V5.9406C1.28125 3.6306 2.60125 2.64062 4.58125 2.64062H11.1738C12.8538 2.64062 14.0613 3.35312 14.3838 4.98062C14.4363 5.28062 14.4737 5.5881 14.4737 5.9406Z" stroke="white" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16.7236 8.19435V12.0569C16.7236 14.3669 15.4036 15.3568 13.4236 15.3568H6.83109C6.27609 15.3568 5.7736 15.2819 5.3386 15.1169C4.4461 14.7869 3.83859 14.1044 3.62109 13.0094C3.92109 13.0769 4.24359 13.1068 4.58109 13.1068H11.1736C13.1536 13.1068 14.4736 12.1169 14.4736 9.80687V5.94435C14.4736 5.59185 14.4436 5.27687 14.3836 4.98438C15.8086 5.28438 16.7236 6.28935 16.7236 8.19435Z" stroke="white" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M7.87064 9.85846C8.96416 9.85846 9.85065 8.97197 9.85065 7.87845C9.85065 6.78492 8.96416 5.89844 7.87064 5.89844C6.77711 5.89844 5.89062 6.78492 5.89062 7.87845C5.89062 8.97197 6.77711 9.85846 7.87064 9.85846Z" stroke="white" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M3.58203 6.22656V9.52658" stroke="white" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12.1641 6.22656V9.52658" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
     )
 }

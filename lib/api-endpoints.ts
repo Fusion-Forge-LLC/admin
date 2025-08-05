@@ -30,5 +30,9 @@ export const API_ENDPOINTS = {
     PROPERTIES: {
         allProperties: (query: string) => `/admin/dashboard/properties/all?${query}`,
         property: (id: string ) => `/admin/dashboard/properties/${id}`
+    },
+
+    ANALYTCIS: {
+        booking: `/admin/dashboard/analytics/booking`
     }
 }
