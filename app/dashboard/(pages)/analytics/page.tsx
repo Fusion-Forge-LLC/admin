@@ -1,10 +1,8 @@
 "use client"
 
 import { useEffect, useState, useRef } from 'react';
-import dynamic from 'next/dynamic';
 import { Chart, ChartConfiguration } from 'chart.js';
 
-// Explicitly register Chart.js components for line, pie, and bar charts
 import {
   LineController,
   LineElement,

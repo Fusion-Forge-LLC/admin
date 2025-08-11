@@ -1,9 +1,7 @@
 "use client"
 
 import { Property } from "@/api/dashboard/property-lists";
-import { Badge } from "@/components/ui/badge";
 import { ColumnDef } from "@tanstack/react-table";
-import { Star } from "lucide-react";
 
 export const properties_column: ColumnDef<Property>[] = [
     {
